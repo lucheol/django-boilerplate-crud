@@ -1,0 +1,19 @@
+<h1>View Based</h1>
+<a href="{% url 'view_based_list' %}">Voltar</a>
+<br />
+
+
+{% if Estados %}
+
+<ul>
+        {% for e in Estados  %}
+            <li>{{e.NomeEstado}} - {{e.Sigla}}</li>
+        {% endfor %}
+    </ul>
+
+{% else %}
+    <p>Não foram encontrados registros.</p>
+{% endif %}
+    
+
+

@@ -1,0 +1,18 @@
+<h1>View Based</h1>
+<a href="{% url 'home' %}">Home</a>
+<a href="{% url 'view_based_create' %}">Create</a>
+<br />
+<ul>
+    {% for e in Estados  %}
+        <li>{{e.NomeEstado}} - {{e.Sigla}} (<a href="{% url 'view_based_detail' e.id %}">Ver</a> | <a href="{% url 'view_based_delete' e.id %}">Delete</a> | <a href="{% url 'view_based_update' e.id %}">Update</a>)</li>
+    {% endfor %}
+</ul>
+
+<h2>Plus: busca</h2>
+<form method="POST" action="{% url 'view_based_search' %}">
+    {% csrf_token %}
+    <label for="NomeEstado">Procurar por nome do estado: </label>
+    <input type="text" name="NomeEstado" id="NomeEstado">
+    <input type="submit" value="Procurar">
+</form>
+    

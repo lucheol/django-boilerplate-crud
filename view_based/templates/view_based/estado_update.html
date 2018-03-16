@@ -1,0 +1,8 @@
+<h1>View Based</h1>
+<a href="{% url 'view_based_list' %}">Voltar</a>
+<br />
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Salvar">
+</form>

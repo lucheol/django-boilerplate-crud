@@ -1,0 +1,8 @@
+<h1>Class Based</h1>
+<a href="{% url 'class_based_list' %}">Voltar</a>
+<br />
+<form method="POST">
+    {% csrf_token %}
+    <p>Deseja remover o Estado {{Estado.NomeEstado}} ?</p>
+    <input type="submit" value="Sim">
+</form>

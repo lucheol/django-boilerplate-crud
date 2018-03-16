@@ -1,0 +1,5 @@
+env
+db.sqlite3
+*.pyc
+class_based/migrations
+view_based/migrations

@@ -1,0 +1,10 @@
+<h1>Class Based</h1>
+<a href="{% url 'home' %}">Home</a>
+<a href="{% url 'class_based_create' %}">Create</a>
+<br />
+<ul>
+    {% for e in Estados  %}
+        <li>{{e.NomeEstado}} - {{e.Sigla}} (<a href="{% url 'class_based_detail' e.id %}">Ver</a> | <a href="{% url 'class_based_delete' e.id %}">Delete</a> | <a href="{% url 'class_based_update' e.id %}">Update</a>)</li>
+    {% endfor %}
+</ul>
+    
