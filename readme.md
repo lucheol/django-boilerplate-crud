@@ -2,8 +2,8 @@
 
 Projeto do django apresentando as 2 formas mais comuns de se implementar um CRUD em Django.
 
-    - Class Based View
-    - Function Based View
+- Class Based View
+- Function Based View
 
 ### Instalação
 
@@ -20,7 +20,7 @@ $ env/bin/pip install -r requeriments.txt
 Faça o migrate, crie o superuser e execute o projeto.
 
 ```sh
-$ env/bin/python manage.py makemigrations
+$ env/bin/python manage.py makemigrations class_based view_based
 $ env/bin/python manage.py migrate
 $ env/bin/python manage.py createsuperuser
 $ env/bin/python manage.py runserver
